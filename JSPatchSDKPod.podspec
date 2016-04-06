@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JSPatchSDKPod"
-  s.version      = "0.1.5"
+  s.version      = "1.2"
   s.summary      = "JSPatch SDK Pod."
 
   s.description  = <<-DESC
