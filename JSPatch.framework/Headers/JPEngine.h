@@ -79,7 +79,13 @@
 + (void)getStructDataWidthDict:(void *)structData dict:(NSDictionary *)dict structDefine:(NSDictionary *)structDefine;
 + (NSDictionary *)getDictOfStruct:(void *)structData structDefine:(NSDictionary *)structDefine;
 
+/*!
+ @method
+ @description Return the registered struct definition in JSPatch,
+ the key of dictionary is the struct name.
+ */
 + (NSMutableDictionary *)registeredStruct;
+
 + (NSDictionary *)overideMethods;
 @end
 

@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch SDK version 1.2
+//  JSPatch SDK version 1.3
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
  用于条件下发，例如: 
     [JSPatch setupUserData:@{@"userId": @"100867", @"location": @"guangdong"}];
  详见在线文档
- 在 `+startWithAppKey:` 之前调用
+ 在 `+sync:` 之前调用
  */
 + (void)setupUserData:(NSDictionary *)userData;
 
