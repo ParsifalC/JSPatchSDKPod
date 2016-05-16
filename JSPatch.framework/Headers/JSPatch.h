@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch SDK version 1.3
+//  JSPatch SDK version 1.4
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
@@ -63,4 +63,19 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
  在 `+startWithAppKey:` 之前调用
  */
 + (void)setupCallback:(void (^)(JPCallbackType type, NSDictionary *data, NSError *error))callback;
+
+/*
+ 自定义RSA key
+ publicKey: 平台上传脚本时 privateKey 对应的 publicKey
+ 在 `+sync:` 之前调用，详见 JSPatch 平台文档
+ */
++ (void)setupRSAPublicKey:(NSString *)publicKey;
+
+
+/*
+ 进入开发模式
+ 平台下发补丁时选择开发预览模式，会只对调用了这个方法的客户端生效。
+ 在 `+sync:` 之前调用，建议在 #ifdef DEBUG 里调。
+ */
++ (void)setupDevelopment;
 @end
