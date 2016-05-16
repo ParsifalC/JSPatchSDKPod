@@ -2,4 +2,4 @@
 http://jspatch.com/Docs/SDK
 
 #CocoaPod
-pod 'JSPatchSDKPod', '~> 0.1.5'
+pod 'JSPatchSDKPod', '~> 1.4'
