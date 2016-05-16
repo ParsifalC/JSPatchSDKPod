@@ -16,17 +16,14 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JSPatchSDKPod"
-  s.version      = "1.3"
+  s.version      = "1.4"
   s.summary      = "JSPatch SDK Pod."
 
-  s.description  = <<-DESC
-                   A longer description of JSPatchSDKPod in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+  # This description is used to generate tags and improve search results.
+  #   * Think: What does it do? Why did you write it? What is the focus?
+  #   * Try to keep it short, snappy and to the point.
+  #   * Write the description between the DESC delimiters below.
+  #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.homepage     = "https://github.com/demonnico/JSPatchSDKPod"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -39,10 +36,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  #s.license      = "MIT "
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.license      = { :type => "MIT", :text => "" }
-
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -65,12 +59,14 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   s.platform     = :ios
+  # s.platform     = :ios
    s.platform     = :ios, "6.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
   # s.osx.deployment_target = "10.7"
+  # s.watchos.deployment_target = "2.0"
+  # s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -85,13 +81,13 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any h, m, mm, c & cpp files. For header
-  #  files it will include any header in the folder.
+  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+  #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
 
-  #s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  #s.exclude_files = "Classes/Exclude"
+  # s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
   s.vendored_frameworks = "JSPatch.framework"
   # s.public_header_files = "Classes/**/*.h"
 
@@ -116,11 +112,9 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "JavaScriptCore"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
-  #s.library   = "libz"
-  # s.libraries = "iconv", "xml2"
+  s.frameworks   = "Foundation"
+  s.weak_framework = "JavaScriptCore"
+  s.libraries = "z"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
