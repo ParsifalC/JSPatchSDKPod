@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch SDK version 1.4
+//  JSPatch SDK version 1.5
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
 
 @interface JSPatch : NSObject
 
+#pragma mark - 主要API
+
 /*
  传入在平台申请的 appKey。会自动执行已下载到本地的 patch 脚本。
  建议在 -application:didFinishLaunchingWithOptions: 开头处调用
@@ -35,6 +37,9 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
  不能与 `+startWithAppKey:` 一起调用，测试完成后需要删除。
  */
 + (void)testScriptInBundle;
+
+
+#pragma mark - 设置
 
 /*
  自定义log，使用方法：
@@ -78,4 +83,37 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
  在 `+sync:` 之前调用，建议在 #ifdef DEBUG 里调。
  */
 + (void)setupDevelopment;
+
+
+
+
+
+#pragma mark - 在线参数
+/***************** 在线参数 ******************/
+/*
+ 请求在线参数
+ */
++ (void)updateConfigWithAppKey:(NSString *)appKey;
+
+/*
+ 获取已缓存在本地的所有在线参数
+ */
++ (NSDictionary *)getConfigParams;
+
+/*
+ 根据键值获取已缓存在本地的一个在线参数
+ */
++ (NSString *)getConfigParam:(NSString *)key;
+
+/*
+ 设置在线参数请求间隔
+ 默认请求间隔为30分钟，即30分钟内多次调用 +updateConfigWithAppKey: 接口只请求一次
+ 在 +updateConfigWithAppKey: 之前调用
+ */
++ (void)setupConfigInterval:(NSTimeInterval)configInterval;
+
+/*
+ 设置在线参数请求完成的回调
+ */
++ (void)setupUpdatedConfigCallback:(void (^)(NSDictionary *configs, NSError *error))cb;
 @end
