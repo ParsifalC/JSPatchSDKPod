@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "JSPatchSDKPod"
-  s.version      = "1.5.2"
+  s.version      = "1.6"
   s.summary      = "JSPatch Platfomr SDK Pod.JSPath平台SDK的Pod."
   s.homepage     = "https://github.com/mingweizhang/JSPatchSDKPod"
   s.license      = { :type => "MIT", :text => "" }
