@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch SDK version 1.5.2
+//  JSPatch SDK version 1.6
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
     JPCallbackTypeUpdateDone    = 3,    //已拉取新脚本
     JPCallbackTypeCondition     = 4,    //条件下发
     JPCallbackTypeGray          = 5,    //灰度下发
+    JPCallbackTypeUpdateFail    = 6,    //脚本拉取错误
 };
 
 @interface JSPatch : NSObject
