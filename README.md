@@ -1,3 +1,6 @@
+#官方版本
+原作者[bang](https://github.com/bang590)已开始更新维护官方版本，此版本将停止维护。望周知。
+https://github.com/bang590/JSPatchPlatform
 #JSPatchSDKPod
 http://jspatch.com/Docs/SDK
 
